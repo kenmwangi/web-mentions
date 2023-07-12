@@ -11,7 +11,7 @@ export default async function Login() {
     <div>
       {!session ? (
         <Link
-          href="/api/auth/signin"
+          href="/mentions"
           className="items-center justify-center w-full px-4 py-1.5 text-center text-white duration-200 bg-violet-400 border-2 border-violet-400 rounded-full inline-flex hover:bg-transparent hover:border-violet-400 hover:text-violet-400 focus:outline-none lg:w-auto focus-visible:outline-violet-400 text-sm focus-visible:ring-violet-400"
         >
           Get Started

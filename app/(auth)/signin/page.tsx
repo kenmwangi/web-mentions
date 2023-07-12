@@ -4,9 +4,8 @@ import Container from "@/components/Container";
 import { useRouter, useSearchParams } from "next/navigation";
 import React from "react";
 export default function SignIn() {
-  const router = useRouter();
   const searchParams = useSearchParams();
-  const callbackUrl = searchParams.get("callbackUrl") || "/signin";
+  const callbackUrl = searchParams.get("callbackUrl") || "/mentions";
 
   return (
     <div className="bg-gradient-to-b from-gray-100 via-neutral-50 to-white">
