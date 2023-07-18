@@ -72,20 +72,20 @@ export default async function Mentions() {
                         {description}
                       </p>
 
-                      <div className="flex justify-between items-center mt-8">
+                      {/* <div className="flex justify-between items-center mt-8">
                         <Link
-                          href={`/blog/edit/${id}`}
+                          href={`/mentions/edit/${id}`}
                           className="text-blue-400"
                         >
                           Edit
                         </Link>
                         <Link
-                          href={`/blog/delete/${id}`}
+                          href={`/mentions/delete/${id}`}
                           className="text-rose-400"
                         >
                           Delete
                         </Link>
-                      </div>
+                      </div> */}
                     </article>
                   );
                 })}
