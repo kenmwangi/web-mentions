@@ -3,6 +3,9 @@ import Container from "@/components/Container";
 import Link from "next/link";
 import { AiOutlinePlus } from "react-icons/ai";
 import { IoDocumentTextOutline } from "react-icons/io5";
+import { getCurrentUser } from "@/lib/session";
+import { redirect } from "next/navigation";
+import { authOptions } from "@/lib/auth";
 
 interface Mentions {
   id: string;
@@ -23,9 +26,14 @@ async function fetchMentions() {
 }
 
 export default async function Mentions() {
+  const user = await getCurrentUser();
+
+  if (!user) {
+    redirect(authOptions?.pages?.signIn || "/signin");
+  }
+
   const mentions = await fetchMentions();
 
-  console.log(mentions);
   return (
     <div>
       <Container>
